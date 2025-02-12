@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  user-select: none;
+}
+
+iframe {
+  pointer-events: none; 
+  overscroll-behavior: contain; 
+  touch-action: pan-x pan-y; 
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url("/src/assets/fonts/general-sans-cufonfonts/GeneralSans-Regular.otf") format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("/src/assets/fonts/Rubik/static/Rubik-Black.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,5 +43,141 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'General Sans', sans-serif;
+}
+
+button {
+  border: 1px solid transparent; /* Required to show border */
+  border-image: linear-gradient(45deg, #846018 13%, #F3DC91 47%, #C09D49 78%, #EBE0A0 100%);
+  border-image-slice: 1;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #F3DC91;
+  transition-duration: 0.2;
+  transition-property: all;
+}
+
+.countdown {
+  font-family: var(--font-outfit);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-image: linear-gradient(45deg, #846018 13%, #F3DC91 47%, #C09D49 78%, #EBE0A0 100%);
+  -webkit-background-clip: text; /* Clip the background to text */
+  color: transparent;
+}
+
+.heading {
+  font-size: 100px;
+  border: 2px solid red;
+}
+
+.spotlight {
+  @apply xl:w-[30vw] h-[100vh] w-[20rem];
+  background: linear-gradient(to bottom, #fcc75c, transparent);
+  /* height: 100vh;
+  width: 30vw; */
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  opacity: 0.1;
+  box-shadow: inset 0 -200px 500px 10px rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #b5a436; /* Golden border */
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+
+.btn::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.btn::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+button {
+  transition-duration: 0.2s;
+}
+
+button:active {
+  scale: 0.95;
+}
+
+.progress {
+  background-image: linear-gradient(45deg, #846018 13%, #F3DC91 47%, #C09D49 78%);
+}
+
+.mintform {
+  border: 1px solid transparent; /* Required to show border */
+  border-image: linear-gradient(45deg, #846018 13%, #F3DC91 47%, #C09D49 78%, #EBE0A0 100%);
+  border-image-slice: 1;
+  background: white;
+  font-size: 16px;
+  background: linear-gradient(to bottom right, #202020, black);
+  color: #F3DC91;
+  transition-duration: 0.2;
+  transition-property: all;
+}
+
+h1 {
+  @apply text-3xl lg:text-5xl text-white
+}
+
+.mintOptions {
+  border: 1px solid transparent; /* Required to show border */
+  border-image: linear-gradient(45deg, #846018 13%, #F3DC91 47%, #C09D49 78%, #EBE0A0 100%);
+  border-image-slice: 1;
+  background: white;
+  font-size: 16px;
+  cursor: pointer;
+  background: transparent;
+  color: #F3DC91;
+  transition-duration: 0.2;
+  transition-property: all;
+  letter-spacing: 1px;
+}
+
+.golden {
+  background: linear-gradient(45deg, #846018 13%, #F3DC91 47%, #C09D49 78%, #EBE0A0 100%);;
+}
+
+
+button:disabled {
+  background-color: #010101;
+  color: #525252;
+  opacity: 0.5;
 }
