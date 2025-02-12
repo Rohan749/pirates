@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Button from "./common/Button";
 
 const Mint = () => {
-  const [progress, setProgress] = useState(40);
+//   const [progress, setProgress] = useState(40);
 
   const ticketOptions = [
     {
@@ -35,7 +35,7 @@ const Mint = () => {
             <div className="w-full bg-gray-800 rounded-full h-1 relative overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r progress from-yellow-700 via-yellow-600 to-yellow-400 transition-all duration-300"
-                style={{ width: `${progress}%` }}
+                style={{ width: `${40}%` }}
               />
             </div>
           </div>
