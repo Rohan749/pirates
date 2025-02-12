@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const Header = () => {
   return (
-    <header className='p-3 sm:p-5 lg:px-10 lg:p-10  w-full'>
+    <header className='p-3 sm:p-5 lg:px-10 lg:p-10 '>
         <div className='flex items-center justify-between'>
         <Link href={"/"} className='w-[9rem]'><Image src={logo} alt='Pirates' /></Link>
         <div className='hidden md:block'>

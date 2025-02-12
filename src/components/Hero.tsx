@@ -54,7 +54,7 @@ const Hero = ({ targetDate }: heroProps) => {
   useEffect(() => {}, []);
 
   return (
-    <section className="px-3 sm:px-5 lg:px-10 countdown text-xl h-[70vh] w-full">
+    <section className="px-3 sm:px-5 lg:px-10 countdown text-xl h-[70vh] w-full overflow-x-hidden">
       {mintNow && (
         <div className="flex h-full justify-between gap-5">
           <div className="flex flex-col justify-center items-center gap-20 w-[25%]">
@@ -75,7 +75,7 @@ const Hero = ({ targetDate }: heroProps) => {
           </div>
         </div>
       )}
-     <div className="absolute left-5 z-50 bottom-5 text-white text-xs flex gap-5">
+     <div className="absolute left-3 sm:left-5 lg:left-10 z-50 bottom-5 text-white text-xs flex gap-5">
         <Link href={"/mint"}>
          <span>Terms of Services</span>
         </Link>
