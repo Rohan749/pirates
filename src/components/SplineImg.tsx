@@ -1,4 +1,4 @@
-import { useGSAP } from '@gsap/react'
+
 import gsap from "gsap"
 import Spline from '@splinetool/react-spline'
 import React, { useEffect } from 'react'

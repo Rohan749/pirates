@@ -6,7 +6,6 @@ import pirates from "../assets/images/pirates.svg"
 import logo from "../assets/images/logo.svg"
 import Button from './common/Button'
 import Link from 'next/link'
-import { useGSAP } from '@gsap/react'
 import gsap from "gsap"
 
 interface headerInterface {

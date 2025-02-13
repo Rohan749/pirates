@@ -1,8 +1,6 @@
 "use client"
 
-import React, { useEffect, useRef } from 'react';
-import wenMint from "../assets/images/WEN MINT.svg"
-import { useGSAP } from '@gsap/react';
+import React, { useEffect } from 'react';
 import gsap from "gsap"
 import Image from 'next/image';
 import baseLight from "../assets/images/baselight.svg";

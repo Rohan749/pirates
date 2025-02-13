@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit  } from "next/font/google";
 import "./globals.css";
-import Header from "../components/Header";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
