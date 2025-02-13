@@ -1,81 +1,56 @@
 "use client";
 import { NumFormatter } from "@/utils/utils";
 import React, { useEffect, useState } from "react";
-import baseLight from "../assets/images/baselight.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap"
+import logo from "../assets/images/logo.svg"
+import Countdown from "./Countdown";
 
 interface heroProps {
   targetDate: number;
+  loading: boolean;
 }
 
-const Hero = ({ targetDate }: heroProps) => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
+const Hero = ({ targetDate, loading }: heroProps) => {
 
-  const [mintNow, setMintNow] = useState(false);
+  useGSAP(() => {
+    gsap.fromTo(".logo", {
+      opacity: 0
+    }, {
+      opacity: 1,
+      delay: 0.5,
+      duration: 1,
+      ease: "power1.in"
+      
+    })
+  })
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const currentTime = new Date().getTime();
-      const timeDifference = targetDate - currentTime;
+    if(!loading) {
+      gsap.to(".loading-screen", {
+        opacity: 0,
+        visibility: "hidden",
+        duration: 0.5
+      })
+    }
+  }, [loading])
 
-      if (timeDifference <= 0) {
-        clearInterval(interval);
-      } else {
-        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        const minutes = Math.floor(
-          (timeDifference % (1000 * 60 * 60)) / (1000 * 60)
-        );
-        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-        setTimeLeft({ days, hours, minutes, seconds });
-      }
-
-      if (
-        timeLeft.days === 0 &&
-        timeLeft.hours === 0 &&
-        timeLeft.minutes === 0 &&
-        timeLeft.seconds === 0
-      ) {
-        setMintNow(true);
-      }
-    }, 1000);
-    return () => clearInterval(interval);
-  }, [targetDate, timeLeft]);
-
-  useEffect(() => {}, []);
+  // useEffect(() => {
+  //   if(!mintNow && !loading) {
+    
+  //   }
+  // }, [mintNow, loading])
 
   return (
+    <>
+    <div className="loading-screen absolute h-[100vh] w-full bg-black z-50 top-0 flex items-center justify-center">
+      <Image className="logo opacity-0" src={logo} alt="PIRATES" />
+    </div>
     <section className="px-3 sm:px-5 lg:px-10 countdown text-xl h-[70vh] w-full overflow-x-hidden">
-      {mintNow && (
-        <div className="flex h-full justify-between gap-5">
-          <div className="flex flex-col justify-center items-center gap-20 w-[25%]">
-            <div className="text-5xl lg:text-10xl">{NumFormatter(timeLeft.days)}</div>
-            <div>Days</div>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-20  w-[25%]">
-            <div className="text-5xl lg:text-10xl">{NumFormatter(timeLeft.hours)}</div>
-            <div>Hours</div>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-20  w-[25%]">
-            <div className="text-5xl lg:text-10xl">{NumFormatter(timeLeft.minutes)}</div>
-            <div>Minutes</div>
-          </div>
-          <div className="flex flex-col justify-center items-center gap-20  w-[25%]">
-            <div className="text-5xl lg:text-10xl">{NumFormatter(timeLeft.seconds)}</div>
-            <div>Seconds</div>
-          </div>
-        </div>
-      )}
-     <div className="absolute left-3 sm:left-5 lg:left-10 z-50 bottom-5 text-white text-xs flex gap-5">
+     <Countdown targetDate={targetDate} loading={loading} />
+     <div className="absolute left-3 sm:left-5 lg:left-10 z-40 bottom-5 text-white text-xs flex gap-5">
         <Link href={"/mint"}>
          <span>Terms of Services</span>
         </Link>
@@ -83,17 +58,16 @@ const Hero = ({ targetDate }: heroProps) => {
          <span>Privacy Policy</span>
         </Link>
       </div>
-      <div className="absolute left-1/2 -translate-x-1/2 z-50 bottom-16 lg:bottom-5">
+      <div className="absolute left-1/2 -translate-x-1/2 z-40 bottom-16 lg:bottom-5">
         <Link href={"/mint"}>
           <button className="btn text-sm ">
-            {!mintNow ? <span>Mint Now!</span> : <span>Wen mint?</span>}
+             <span>Mint Now!</span> 
+            
           </button>
         </Link>
       </div>
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
-        <Image src={baseLight} alt="" />
-      </div>
     </section>
+    </>
   );
 };
 

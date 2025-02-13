@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit  } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(useGSAP);
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,9 +41,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
       >
-        <div className="z-50 relative">
-        <Header />
-        </div>
+        
 
         {children}
       </body>

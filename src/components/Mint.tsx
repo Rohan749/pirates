@@ -4,7 +4,6 @@ import React from "react";
 import Button from "./common/Button";
 
 const Mint = () => {
-//   const [progress, setProgress] = useState(40);
 
   const ticketOptions = [
     {
