@@ -10,7 +10,7 @@ interface countInterface {
     loading: boolean
 }
 
-const Countdown = ({targetDate, loading}:countInterface) => {
+const Countdown = ({targetDate}:countInterface) => {
 
     useGSAP(() => {
         gsap.to(".mintNow", 
@@ -28,6 +28,8 @@ const Countdown = ({targetDate, loading}:countInterface) => {
   });
 
   const [mintNow, setMintNow] = useState(false);
+
+  console.log(mintNow)
 
   useEffect(() => {
     const interval = setInterval(() => {
