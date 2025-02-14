@@ -24,7 +24,7 @@ export default function Home() {
 
   useEffect(() => {
     gsap.set(".ball", { xPercent: -50, yPercent: -50 })
-    let targets = gsap.utils.toArray(".ball");
+    const targets = gsap.utils.toArray(".ball");
    
 
 
@@ -33,7 +33,7 @@ export default function Home() {
       const fadeThresholdY = 150;
       // const fadeThresholdRight = 100;
       // const fadeThresholdLeft = -100;
-      let opacity = e.clientY < fadeThresholdY ? 0 : 1; // Fade out when near top
+      const opacity = e.clientY < fadeThresholdY ? 0 : 1; // Fade out when near top
       gsap.to(targets, {
         duration: 0.9,
         x: e.clientX,

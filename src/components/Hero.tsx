@@ -9,7 +9,7 @@ interface heroProps {
   loading: boolean;
 }
 
-const Hero = React.memo(({ targetDate, loading }: heroProps) => {
+const Hero = React.memo(({ loading }: heroProps) => {
 
   useGSAP(() => {
     gsap.fromTo(".logo", {
@@ -64,5 +64,6 @@ const Hero = React.memo(({ targetDate, loading }: heroProps) => {
     </>
   );
 });
+Hero.displayName = 'Hero';
 
 export default Hero;

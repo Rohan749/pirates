@@ -94,5 +94,7 @@ const CountDown = React.memo(({ targetDate }: countInterface) => {
       </div>
     );
   });
+
+  CountDown.displayName = 'CountDown';
   
   export default CountDown;
