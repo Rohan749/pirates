@@ -7,8 +7,8 @@
 }
 
 body {
-
-  cursor: url("/src/assets/images/WEN\ MINT.svg"), url('/src/assets/images/WEN-MINT.cur')
+  overflow-x: hidden;
+  /* cursor: url("/src/assets/images/WEN\ MINT.svg"), url('/src/assets/images/WEN-MINT.cur') */
 }
 
 
@@ -51,6 +51,7 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'General Sans', sans-serif;
+  cursor: url("/public/WEN\ MINT.svg") 10 60, auto;
 }
 
 button {
@@ -75,6 +76,7 @@ button {
   -webkit-background-clip: text; /* Clip the background to text */
   color: transparent;
 }
+
 
 .heading {
   font-size: 100px;
