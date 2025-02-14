@@ -39,11 +39,14 @@ const Hero = React.memo(({ targetDate, loading }: heroProps) => {
   //   }
   // }, [mintNow, loading])
 
+  
+
   return (
     <>
     {/* <div className="loading-screen  bg-black flex items-center justify-center">
       <Image className="logo opacity-0" src={logo} alt="PIRATES" />
     </div> */}
+    
     <section className="px-3 sm:px-5 lg:px-10 text-xl h-full w-full overflow-x-hidden">
      <div className="absolute left-3 sm:left-5 lg:left-10 z-40 bottom-5 text-white text-xs flex gap-5">
         <Link href={"/mint"}>
@@ -54,12 +57,7 @@ const Hero = React.memo(({ targetDate, loading }: heroProps) => {
         </Link>
       </div>
       <div className="absolute left-1/2 -translate-x-1/2 z-40 bottom-16 lg:bottom-5">
-        <Link href={"/mint"}>
-          <button className="btn text-sm ">
-             <span>Mint Now!</span> 
-            
-          </button>
-        </Link>
+       
       </div>
      
     </section>

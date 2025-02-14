@@ -59,8 +59,10 @@ const Header = ({ loading }: headerInterface) => {
     }
   }, [loading]);
 
+
   return (
     <header className="p-3 sm:p-5 lg:px-10 lg:p-10 header w-full opacity-0">
+    
       <div className="flex items-center justify-between">
         <Link href={"/"} className="md:mr-[6rem]">
           <Image src={logo} alt="Pirates" className="md:block hidden" />
@@ -71,7 +73,7 @@ const Header = ({ loading }: headerInterface) => {
         </div> */}
         <div className="flex items-center gap-2">
           <Button>Connect Wallet</Button>
-          <span className="text-3xl text-yellow-600 cursor-pointer hover:scale-[1.2] transition-all" onClick={toggleAudio}>
+          <span className="text-3xl text-[#C09D49] cursor-pointer hover:scale-[1.2] transition-all" onClick={toggleAudio}>
             {playing ? <MdOutlineMusicNote /> : <MdOutlineMusicOff />}
           </span>
         </div>
