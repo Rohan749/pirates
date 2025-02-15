@@ -62,7 +62,7 @@ export default function Home() {
       <Header loading={loading} />
       </div>
       <Hero targetDate={targetDate} loading={loading} />
-      <div className="absolute top-0 z-10 w-full">
+      <div className="absolute top-0 h-full z-10 w-full">
       <SplineImg loading={loading} handleSplineLoad={handleSplineLoad} />
       </div>
       <div className="top-0 left-1/2 -translate-x-1/2 absolute h-full w-full">
