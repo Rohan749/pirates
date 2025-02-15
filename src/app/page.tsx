@@ -8,7 +8,6 @@ import Header from "../components/Header";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import CountDown from "@/components/Countdown";
-import Link from "next/link";
 
 gsap.registerPlugin(useGSAP);
 
@@ -50,6 +49,7 @@ export default function Home() {
 
   return (
     <div className="overflow-x-hidden h-full">
+
       {/* <div className="ball w-4 z-30 h-4 absolute -top-5 -left-5 rounded-full cursor-none">
       <Link href={"/mint"}>
           <button className="btn text-sm w-[8rem]">
