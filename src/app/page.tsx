@@ -49,16 +49,16 @@ export default function Home() {
 );
 
   return (
-    <div className="overflow-x-hidden">
-      <div className="ball w-4 z-30 h-4 absolute -top-5 -left-5 rounded-full cursor-none">
+    <div className="overflow-x-hidden h-full">
+      {/* <div className="ball w-4 z-30 h-4 absolute -top-5 -left-5 rounded-full cursor-none">
       <Link href={"/mint"}>
           <button className="btn text-sm w-[8rem]">
              <span>WEN MINT?</span> 
             
           </button>
         </Link>
-      </div>      
-      <div className="w-full backdrop-blur-mdblur-xl fixed z-40">
+      </div>       */}
+      <div className="w-full fixed z-40">
       <Header loading={loading} />
       </div>
       <Hero targetDate={targetDate} loading={loading} />
@@ -68,7 +68,6 @@ export default function Home() {
       <div className="top-0 left-1/2 -translate-x-1/2 absolute h-full w-full">
       <Spotlight loading={loading} />
       </div>
-
     <CountDown targetDate={targetDate} loading={loading} />
     </div>
   );

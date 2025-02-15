@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import gsap from "gsap"
 import Image from 'next/image';
-import spotlight from "../assets/images/spotlight2.png"
+import baselight from "../assets/images/baselight.png"
 import { useGSAP } from '@gsap/react';
 
 interface spotlightInterface {
@@ -28,17 +28,17 @@ const Spotlight = ({loading}:spotlightInterface) => {
   useGSAP(() => {
 
     gsap.to(".baselight", {
-      opacity: 0.8,
+      opacity: 1,
       duration: 1.5,
       delay: 0.9,
     })
   })
 
   return (
-    <div className='lighting flex flex-col justify-start items-center  h-full'>
-   <Image src={spotlight} alt='' className='baselight  h-full  overflow-y-hidden lg:w-fit opacity-[0]'/>
-   {/* <div className=" opacity-0 baselight lg:mt-[-12rem] ">
-        <Image className='' src={baseLight} alt="" />
+    <div className='lighting flex flex-col justify-start items-center h-full '>
+   <Image src={baselight} alt='' height={900} className='baselight  w-fit opacity-[0] overflow-y-hidden h-full'/>
+   {/* <div className=" opacity-0 baselight  ">
+        <Image className='' src={baselight} alt="" />
       </div> */}
    </div>
   );

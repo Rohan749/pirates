@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/images/pirateslogo.svg";
 import icon from "../assets/images/logo.svg";
-import Button from "./common/Button";
 import Link from "next/link";
 import gsap from "gsap";
 import ReactHowler from "react-howler";
@@ -71,8 +70,13 @@ const Header = ({ loading }: headerInterface) => {
         {/* <div className='hidden md:block'>
         <Image src={pirates} alt='Pirates' />
         </div> */}
-        <div className="flex items-center gap-2">
-          <Button>Connect Wallet</Button>
+        <div className="flex items-center gap-4">
+        <Link href={""}>
+          <button className="btn text-xs min-w-[8rem]">
+             <span>CONNECT WALLET</span> 
+            
+          </button>
+        </Link>
           <span className="text-3xl text-[#C09D49] cursor-pointer hover:scale-[1.2] transition-all" onClick={toggleAudio}>
             {playing ? <MdOutlineMusicNote /> : <MdOutlineMusicOff />}
           </span>
@@ -82,7 +86,7 @@ const Header = ({ loading }: headerInterface) => {
   <source src="https://drive.google.com/file/d/11fcS_N8KffmrB-gAlPP7ITVwPTK0aUAC/view" type="audio/mpeg" />
   Your browser does not support the audio element.
 </audio> */}
-      <ReactHowler src="/clock.mp3" mute={!playing} rate={1}  loop={true} />
+      <ReactHowler playing={true} src="/clock.mp3" mute={!playing} rate={1}  loop={true} />
     </header>
   );
 };

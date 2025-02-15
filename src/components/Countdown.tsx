@@ -69,7 +69,7 @@ const CountDown = React.memo(({ targetDate }: countInterface) => {
     }, [targetDate, timeLeft]); 
   
     return (
-      <div className="countdown flex h-full justify-between gap-5 w-full pt-44 2xl:pt-64 opacity-0">
+      <div className="countdown flex h-[100%] justify-between gap-5 w-full items-center opacity-0">
         <div className="flex flex-col justify-center items-center gap-10 w-[25%]">
           <div className="text-5xl lg:text-10xl">{formattedTime(timeLeft.days)}</div>
           <div>Days</div>
