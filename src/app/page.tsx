@@ -32,7 +32,7 @@ export default function Home() {
       const fadeThresholdY = 150;
       // const fadeThresholdRight = 100;
       // const fadeThresholdLeft = -100;
-      const opacity = e.clientY < fadeThresholdY ? 0 : 1; // Fade out when near top
+      
       gsap.to(targets, {
         // duration: 0.9,
         x: e.clientX,
