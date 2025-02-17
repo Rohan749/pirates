@@ -35,6 +35,8 @@ iframe {
 
 
 
+
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -60,7 +62,7 @@ button {
   border-image-slice: 1;
   background: white;
   font-size: 12px;
-  cursor: pointer;
+  /* cursor: none; */
   background-color: transparent;
   color: #F3DC91;
   transition-duration: 0.2;

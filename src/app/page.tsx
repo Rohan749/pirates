@@ -34,29 +34,25 @@ export default function Home() {
       // const fadeThresholdLeft = -100;
       const opacity = e.clientY < fadeThresholdY ? 0 : 1; // Fade out when near top
       gsap.to(targets, {
-        duration: 0.9,
+        // duration: 0.9,
         x: e.clientX,
         y: e.clientY,
-        opacity: opacity,
-        ease: "power1.out",
+        // opacity: opacity,
+        // ease: "power1.out",
         overwrite: "auto",
-        stagger: 2,
+        // stagger: 2,
       });
     });
   }, 
 []
 );
 
+
   return (
     <div className="overflow-x-hidden h-full">
 
-      {/* <div className="ball w-4 z-30 h-4 absolute -top-5 -left-5 rounded-full cursor-none">
-      <Link href={"/mint"}>
-          <button className="btn text-sm w-[8rem]">
-             <span>WEN MINT?</span> 
-            
-          </button>
-        </Link>
+      {/* <div className="ball w-10 z-30 h-10 absolute -top-0 -left-0 rounded-full cursor-dis">
+          <Image src={cursor} alt="" height={500} width={500} />
       </div>       */}
       <div className="w-full fixed z-40">
       <Header loading={loading} />

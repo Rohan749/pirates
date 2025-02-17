@@ -58,6 +58,9 @@ const Header = ({ loading }: headerInterface) => {
     }
   }, [loading]);
 
+  useEffect(() => {
+    audioRef.current?.play().catch(error => console.log("Autoplay blocked:", error));
+  }, []);
 
   return (
     <header className="p-3 sm:p-5 lg:px-10 lg:p-10 header w-full opacity-0">
@@ -86,7 +89,8 @@ const Header = ({ loading }: headerInterface) => {
   <source src="https://drive.google.com/file/d/11fcS_N8KffmrB-gAlPP7ITVwPTK0aUAC/view" type="audio/mpeg" />
   Your browser does not support the audio element.
 </audio> */}
-      <ReactHowler playing={true} src="/clock.mp3" mute={!playing} rate={1}  loop={true} />
+      <ReactHowler  playing={true} src="/audio/clock.mp3" mute={!playing} rate={1}  loop={true} />
+      {/* <audio ref={audioRef} src="/clock.mp3" /> */}
     </header>
   );
 };
