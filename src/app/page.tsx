@@ -29,7 +29,7 @@ export default function Home() {
 
     window.addEventListener("mousemove", (e) => {
 
-      const fadeThresholdY = 150;
+      // const fadeThresholdY = 150;
       // const fadeThresholdRight = 100;
       // const fadeThresholdLeft = -100;
       
