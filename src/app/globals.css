@@ -173,7 +173,7 @@ button:active {
 }
 
 h1 {
-  @apply text-3xl lg:text-5xl text-white
+  @apply text-3xl lg:text-4xl  text-white
 }
 
 .mintOptions {
