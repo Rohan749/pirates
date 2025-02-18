@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import SplineImg from "../components/SplineImg";
-import Spotlight from "../components/Spotlight";
 import Header from "../components/Header";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

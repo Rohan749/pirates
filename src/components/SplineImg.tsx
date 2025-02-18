@@ -1,7 +1,7 @@
 
 import gsap from "gsap"
 import Spline from '@splinetool/react-spline'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 
 interface splineImgInterface {
   handleSplineLoad: () => void;
