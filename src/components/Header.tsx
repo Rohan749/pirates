@@ -38,8 +38,6 @@ const Header = ({ loading }: headerInterface) => {
     }
   }
 
-  console.log("REf", audioRef.current)
-
   
   useEffect(() => {
     if (!loading) {
@@ -89,7 +87,7 @@ const Header = ({ loading }: headerInterface) => {
   <source src="https://drive.google.com/file/d/11fcS_N8KffmrB-gAlPP7ITVwPTK0aUAC/view" type="audio/mpeg" />
   Your browser does not support the audio element.
 </audio> */}
-      <ReactHowler  playing={true} src="/audio/clock.mp3" mute={!playing} rate={1}  loop={true} />
+      <ReactHowler  playing={playing} src="/audio/audio.mp3"  rate={1}  loop={true} />
       {/* <audio ref={audioRef} src="/clock.mp3" /> */}
     </header>
   );

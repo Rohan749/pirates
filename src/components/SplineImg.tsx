@@ -19,7 +19,7 @@ const SplineImg = ({handleSplineLoad, loading}:splineImgInterface) => {
         opacity: 0,
       }, {
         y: 0,
-        opacity: 1,
+        opacity: 0.95,
         duration: 3,
         delay: 1,
        ease: "power4.out"

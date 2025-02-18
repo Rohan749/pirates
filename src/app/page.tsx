@@ -63,9 +63,9 @@ export default function Home() {
       {/* <div className="top-0 left-1/2 -translate-x-1/2 absolute h-full w-full">
       <Spotlight loading={loading} />
       </div> */}
-      <div className="absolute z-50 w-full">
+      {/* <div className="absolute w-full"> */}
     <CountDown targetDate={targetDate} loading={loading} />
-    </div>
+    {/* </div> */}
     </div>
   );
 }

@@ -29,7 +29,7 @@ const CountDown = React.memo(({ targetDate }: countInterface) => {
     });
 
     gsap.to(".countdown", {
-      opacity: 0.25,
+      opacity: 1,
       duration: 2,
       delay: 3,
     });
@@ -79,7 +79,7 @@ const CountDown = React.memo(({ targetDate }: countInterface) => {
           <div className="text-5xl lg:text-10xl">
             {formattedTime(timeLeft.days)}
           </div>
-          <div>Days</div>
+          <div className="text-white">Days</div>
         </div>
         <div className="flex flex-col justify-center items-center gap-10 w-[25%]">
           <div className="text-5xl lg:text-10xl">
@@ -91,13 +91,13 @@ const CountDown = React.memo(({ targetDate }: countInterface) => {
           <div className="text-5xl lg:text-10xl">
             {formattedTime(timeLeft.minutes)}
           </div>
-          <div>Minutes</div>
+          <div className="text-white">Minutes</div>
         </div>
         <div className="flex flex-col justify-center items-center gap-10 w-[25%]">
           <div className="text-5xl lg:text-10xl">
             {formattedTime(timeLeft.seconds)}
           </div>
-          <div>Seconds</div>
+          <div className="text-white opacity-1">Seconds</div>
         </div>
         {mintNow && (
           <div
