@@ -15,11 +15,9 @@ const SplineImg = ({handleSplineLoad, loading}:splineImgInterface) => {
 
     useEffect(() => {
      if(!loading){ gsap.fromTo(".spline-section", {
-        y: 1000,
         opacity: 0,
       }, {
-        y: 0,
-        opacity: 0.95,
+        opacity: 1,
         duration: 3,
         delay: 1,
        ease: "power4.out"

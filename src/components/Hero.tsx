@@ -50,7 +50,7 @@ const Hero = React.memo(({ loading }: heroProps) => {
     <section className="px-3 sm:px-5 lg:px-10 text-xl h-full w-full overflow-x-hidden">
      <div className="absolute left-3 sm:left-5 lg:left-10 z-40 bottom-5 text-white text-xs flex gap-5">
         <Link href={"/mint"}>
-         <span>Terms of Services</span>
+         <span>Terms of Service</span>
         </Link>
         <Link href={"/mint"}>
          <span>Privacy Policy</span>
