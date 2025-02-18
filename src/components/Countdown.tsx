@@ -29,7 +29,7 @@ const CountDown = React.memo(({ targetDate }: countInterface) => {
     });
 
     gsap.to(".countdown", {
-      opacity: 1,
+      opacity: 10,
       duration: 2,
       delay: 3,
     });
