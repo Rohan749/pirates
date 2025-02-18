@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
 import SplineImg from "../components/SplineImg";
+import Spotlight from "../components/Spotlight";
 import Header from "../components/Header";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -53,17 +54,17 @@ export default function Home() {
       {/* <div className="ball w-10 z-30 h-10 absolute -top-0 -left-0 rounded-full cursor-dis">
           <Image src={cursor} alt="" height={500} width={500} />
       </div>       */}
-      <div className="w-full fixed z-50">
+      <div className="w-full fixed z-40">
       <Header loading={loading} />
       </div>
       <Hero targetDate={targetDate} loading={loading} />
-      <div className="absolute top-0 h-full z-10 w-full ">
+      <div className="absolute top-0 h-full z-10 w-full">
       <SplineImg loading={loading} handleSplineLoad={handleSplineLoad} />
       </div>
       {/* <div className="top-0 left-1/2 -translate-x-1/2 absolute h-full w-full">
       <Spotlight loading={loading} />
       </div> */}
-      <div className="absolute z-40 w-full">
+      <div className="absolute z-50 w-full">
     <CountDown targetDate={targetDate} loading={loading} />
     </div>
     </div>
