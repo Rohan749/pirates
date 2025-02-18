@@ -53,7 +53,7 @@ export default function Home() {
       {/* <div className="ball w-10 z-30 h-10 absolute -top-0 -left-0 rounded-full cursor-dis">
           <Image src={cursor} alt="" height={500} width={500} />
       </div>       */}
-      <div className="w-full fixed z-40">
+      <div className="w-full fixed z-50">
       <Header loading={loading} />
       </div>
       <Hero targetDate={targetDate} loading={loading} />
@@ -63,7 +63,7 @@ export default function Home() {
       {/* <div className="top-0 left-1/2 -translate-x-1/2 absolute h-full w-full">
       <Spotlight loading={loading} />
       </div> */}
-      <div className="absolute z-50 w-full">
+      <div className="absolute z-40 w-full">
     <CountDown targetDate={targetDate} loading={loading} />
     </div>
     </div>
