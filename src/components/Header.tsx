@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import logo from "../assets/images/pirateslogo.svg";
 import icon from "../assets/images/logo.svg";
 import pirates from "../assets/images/pirates.svg";
 import Link from "next/link";
