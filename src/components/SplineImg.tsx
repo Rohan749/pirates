@@ -11,7 +11,7 @@ interface splineImgInterface {
 
 const SplineImg = ({handleSplineLoad, loading}:splineImgInterface) => {
 
-  const counter = useRef(null)
+  // const counter = useRef(null)
 
     useEffect(() => {
      if(!loading){ gsap.fromTo(".spline-section", {
